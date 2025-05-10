@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adult XXX Addon</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #121212; color: #f0f0f0; margin: 0; padding: 20px; }
+    .container { max-width: 800px; margin: auto; }
+    h1 { text-align: center; color: #e91e63; }
+    .card { background: #1e1e1e; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+    .card h2 { color: #ff4081; margin-top: 0; }
+    .btn { display: inline-block; padding: 10px 20px; background: #e91e63; color: white; border-radius: 4px; text-decoration: none; cursor: pointer; }
+    .btn:hover { background: #d81b60; }
+    ul { margin: 0; padding-left: 20px; }
+    .url-input { width: calc(100% - 110px); background: #333; color: #fff; border: none; padding: 8px; border-radius: 4px; }
+    .email { color: #ffffff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Adult XXX Addon</h1>
+    <div class="card">
+      <h2>🎬 Free Version</h2>
+      <p>Browse and stream movies from your configured M3U playlists.</p>
+      <div>
+        <input id="manifest-url" class="url-input" type="text"
+          value="https://haxwitcher-addon.hf.space/manifest.json" readonly>
+        <button class="btn" onclick="copyUrl()">Copy manifest URL</button>
+      </div>
+    </div>
+    <div class="card">
+      <h2>🌟 GOLD Adult Addon</h2>
+      <ul>
+        <li>📽️ <strong>50 000+</strong> premium adult videos</li>
+        <li>🎥 <strong>20 000+</strong> 4K adult videos</li>
+        <li>💶 Monthly subscription: <strong>€5</strong></li>
+      </ul>
+      <p class="email">Contact us to subscribe: <a href="mailto:email@gmail.com" class="email">email@gmail.com</a></p>
+    </div>
+  </div>
+  <script>
+    function copyUrl() {
+      const urlBox = document.getElementById('manifest-url');
+      navigator.clipboard.writeText(urlBox.value)
+        .then(() => alert('Manifest URL copied!'));
+    }
+  </script>
+</body>
+</html>
